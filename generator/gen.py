@@ -30,7 +30,7 @@ def make_log(service, anomaly=False):
 def main():
     t0 = time.time()
     while True:
-        # Every ~60 seconds inject an anomaly window for demo
+        # Every ~60 seconds it inject an anomaly window for demo
         anomaly = (int(time.time() - t0) % 60) in range(10, 20)
 
         batch = []
