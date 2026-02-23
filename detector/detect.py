@@ -30,7 +30,7 @@ def check_error_spike(conn, service, window_minutes=5):
         )
         err_count = cur.fetchone()[0]
 
-    # Simple threshold for demo (you can improve later)
+    # Simple threshold for demo 
     if err_count >= 20:
         severity = "HIGH"
         summary = f"ERROR spike: {err_count} errors in last {window_minutes} min"
